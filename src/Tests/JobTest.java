@@ -34,7 +34,6 @@ public class JobTest {
                 new PositionType("High-Paying"),
                 new CoreCompetency("Coding"));
         noData = new Job();
-
     }
 
     @Test
