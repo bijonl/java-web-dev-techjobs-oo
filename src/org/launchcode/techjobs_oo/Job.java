@@ -47,6 +47,44 @@ public class Job {
         return Objects.hash(id);
     }
 
+    // TODO: Create the toString Method
+    public String toString(){
+        String noData = "Data Not Available";
+        String id = "ID: " + this.id;
+        String name = "Name: ";
+        if(this.name==null) {
+            name = name.concat(noData);
+        }
+            else {
+                name = name.concat(this.name);
+            }
+        String employer = "Employer: ";
+            if(this.getEmployer()==null){
+                employer = employer.concat(noData);
+            } else {
+                employer=employer.concat(this.getEmployer().getValue());
+            }
+        String location = "Location: ";
+        if(this.getLocation()==null){
+            location = location.concat(noData);
+        } else {
+            location=location.concat(this.getLocation().getValue());
+        }
+        String position = "Position Type: ";
+        if(this.getPositionType()==null){
+            position = position.concat(noData);
+        } else {
+            position = position.concat(this.getPositionType().getValue());
+        }
+        String core = "Core Competency: ";
+        if(this.getCoreCompetency()==null){
+            core = core.concat(noData);
+        } else {
+            core=core.concat(this.getCoreCompetency().getValue());
+        }
+        return "\n" + id + "\n" + name + "\n" + employer + "\n" + location + "\n" + position + "\n" + core + "\n";
+        };
+
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
