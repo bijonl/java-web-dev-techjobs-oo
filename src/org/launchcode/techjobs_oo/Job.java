@@ -52,32 +52,32 @@ public class Job {
         String noData = "Data Not Available";
         String id = "ID: " + this.id;
         String name = "Name: ";
-        if(this.name==null) {
+        if(this.name==null|| this.name.length()<1) {
             name = name.concat(noData);
         }
             else {
                 name = name.concat(this.name);
             }
         String employer = "Employer: ";
-            if(this.getEmployer()==null){
+            if(this.getEmployer()==null || this.getEmployer().getValue().length()<1){
                 employer = employer.concat(noData);
             } else {
                 employer=employer.concat(this.getEmployer().getValue());
             }
         String location = "Location: ";
-        if(this.getLocation()==null){
+        if(this.getLocation()==null || this.getLocation().getValue().length()<1){
             location = location.concat(noData);
         } else {
             location=location.concat(this.getLocation().getValue());
         }
         String position = "Position Type: ";
-        if(this.getPositionType()==null){
+        if(this.getPositionType()==null || this.getPositionType().getValue().length()<1){
             position = position.concat(noData);
         } else {
             position = position.concat(this.getPositionType().getValue());
         }
         String core = "Core Competency: ";
-        if(this.getCoreCompetency()==null){
+        if(this.getCoreCompetency()==null || this.getCoreCompetency().getValue().length()<1){
             core = core.concat(noData);
         } else {
             core=core.concat(this.getCoreCompetency().getValue());
